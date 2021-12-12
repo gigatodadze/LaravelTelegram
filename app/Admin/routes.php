@@ -1,5 +1,6 @@
 <?php
 
+use App\Admin\Controllers\TelegramUserController;
 use Illuminate\Routing\Router;
 
 Admin::routes();
@@ -12,5 +13,8 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('home');
+    $router->get('/telegramUser', 'TelegramUserController@index')->name('grid');
 
+//    $router->get('/telegramUser', 'TelegramUserController@grid')->name('grid');
+    $router->resource('telegram-users', TelegramUserController::class);
 });
