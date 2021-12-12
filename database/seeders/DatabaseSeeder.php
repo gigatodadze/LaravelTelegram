@@ -13,6 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $erorrSeeder = new ErrorSeeder;
+        $erorrSeeder->run();
+
+        $questionsSeeder = new QuestionSeeder;
+        $questionsSeeder->run();
+
+        $QuestionErorrSeeder = new QuestionErrorsSeeder;
+        $QuestionErorrSeeder->run();
     }
 }
