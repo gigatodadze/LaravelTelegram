@@ -1,5 +1,7 @@
 <?php
 
+use BotMan\BotMan\BotManFactory;
+use BotMan\BotMan\Drivers\DriverManager;
 use Illuminate\Support\Facades\Route;
 
 /*
