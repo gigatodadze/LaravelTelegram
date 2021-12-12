@@ -31,7 +31,7 @@ class TelegramUserController extends AdminController
         $grid->column('age', __('Age'))->sortable();
         $grid->column('status', __('Status'));
         $grid->column('action')->display(function () {
-            return "<button class='btn btn-sm btn-success'>Hello</button>";
+            return "<button class='btn btn-sm btn-success'>Привет</button>";
         });
         //search
         $grid->quickSearch('name');
