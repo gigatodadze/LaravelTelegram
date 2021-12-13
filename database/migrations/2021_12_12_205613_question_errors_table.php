@@ -13,16 +13,16 @@ class QuestionErrorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('questionErrors', function (Blueprint $table) {
+        Schema::create('question_errors', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('questionID');
-            $table->unsignedBigInteger('errorID');
+            $table->unsignedBigInteger('question_id');
+            $table->unsignedBigInteger('error_id');
             $table->timestamps();
 
-            $table->unique(['questionID', 'errorID']);
+            $table->unique(['question_id', 'error_id']);
 
-            $table->foreign('questionID')->references('id')->on('questions')->onDelete('cascade');
-            $table->foreign('errorID')->references('id')->on('errors')->onDelete('cascade');
+            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
+            $table->foreign('error_id')->references('id')->on('errors')->onDelete('cascade');
 
         });
     }
